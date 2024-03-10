@@ -1,0 +1,21 @@
+<!-- Page for the instante when the account exists -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charsets="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Exists Screen </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="exists_screen">
+            <h1> An account with the given name already exists!</h1>
+            <p> To fix this issue, please create an account WITH A <strong>DIFFERENT USERNAME.</strong></p>
+            <a href="{{ url_for('main_page') }}">
+                <input type="button" value="Return to the Signup page 🔙">
+            </a>
+        </div>
+    </body>
+</html>

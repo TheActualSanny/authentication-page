@@ -1,0 +1,25 @@
+<!-- Success Screen -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charsets="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Success Screen </title>
+        <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="main_message">
+            <h1> Successfully installed an account! </h1>
+            <p>The Credentials of the account You've installed: </p>
+            <ul>
+                <li> Username: {{ username }} </li>
+                <li> Password: {{ password }} </li>
+            </ul>
+            <a href="{{ url_for('main_page') }}">
+                <input type="button" value="Return to the Signup page 🔙"/>
+            </a>
+        </div>
+    </body>
+</html>

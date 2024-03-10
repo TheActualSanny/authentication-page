@@ -1,0 +1,26 @@
+<!--The main page. Will contain link to the login page! -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charsets="utf-8">
+        <meta name="viewport" content="width=device - width, initial-scale=1">
+        <title>
+            Signup Page
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='icon.png') }}"
+    </head>
+    <body class="signup_page">
+        <div class="main_text">
+            <h1><strong>The Signup page!</strong></h1>
+            <p>Welcome! To register an account, please input the details below. <br>Make sure to follow the instructions!</p>
+        </div>    
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+    
+    </body>
+</html>

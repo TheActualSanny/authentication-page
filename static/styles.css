@@ -1,0 +1,72 @@
+body {
+    background-color: blanchedalmond;
+}
+
+.main_text {
+    font-size: 2em;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_text p {
+    font-size: 0.8em;
+}
+
+.input_field {
+    text-align: center;
+    font-size: 2em;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.input_field textarea {
+    font-size: 1em;
+    display: block;
+    margin: 30px;
+    resize: none;
+    width: 1000px;
+    height: 50px;
+}
+
+.input_field button {
+    color:white;
+    background-color: #003366;
+    width: 250px;
+    height: 30px;
+}
+
+.main_message {
+    width: 600px;
+    height: 100px;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_message input {
+    color: white;
+    background-color: #003366;
+    font-size: 0.8em;
+}
+
+.exists_screen {
+    width: 600px;
+    height: 200px;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.exists_screen h1 {
+    font-size: 2em;
+} 
+
+.exists_screen input {
+    color: white;
+    background-color: #003366;
+    font-size: 0.8em;
+}   
