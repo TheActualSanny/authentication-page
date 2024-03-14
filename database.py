@@ -34,3 +34,14 @@ class db_manager:
         if self._cur.fetchall():
             return True
         self.disconnect()
+
+    def account_checker(self, username, password):
+        if self.checker(username):
+            self.connector()
+            self._cur.execute('SELECT password FROM user_data')
+            passwords = self._cur.fetchall()
+            if (password,) in passwords:
+                return True
+        else:
+            return 
+
