@@ -1,0 +1,28 @@
+<!-- Success screen for login! -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }} ">
+    </head>
+
+    <body>
+        <div class="success_text">
+            <h1> <strong> Login Success! </strong> </h1>
+            <p>You have successfully logged into your account. Congratulations!</p>
+            <p>Given credentials: <br></p>
+            <ul>
+                <li>Username - {{ username }}</li>
+                <li>Password - {{ password }}</li>
+            </ul>
+        </div>
+        <div class="return_button">
+            <form>
+                <button type="submit" formmethod="get"  formaction="{{ url_for('login_page') }}"> Return to the login page🔙 </button>
+            </form>
+        </div>
+    </body>
+</html>

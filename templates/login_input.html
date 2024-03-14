@@ -1,0 +1,14 @@
+{% extends "login.html" %}
+
+{% block login_content %}
+
+<div class="login_input">
+    <form>
+        <textarea class="name" name="login_username" placeholder="Input your username!">{{ start_user }}</textarea>
+        <textarea class="pass" name="login_password" placeholder="Input your password!">{{ start_pass }}</textarea>
+        <button type="submit" class="login_button" formmethod="post" formaction="{{ url_for('login_click') }}"> Login </button> 
+        <button type="submit" class="return_button"  formmethod="get" formaction="{{ url_for('main_page') }}"> Return to the Sign-up Page!🔙</button>
+    </form>
+    
+</div>
+{% endblock login_content %}

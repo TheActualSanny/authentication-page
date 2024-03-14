@@ -1,0 +1,15 @@
+<!--  The Login Screen -->
+{% extends "page_template.html" %}
+
+{% block title %} Login Page {% endblock title %}
+
+{% block content %}
+<div class="login_main">
+    <h1> <strong> Login Page </strong> </h1>
+    <p> Welcome! To login to your account, Please input the credentials in the boxes below. <br> Make sure to double check them!</p>
+</div>
+<main>
+    {% block login_content %}
+    {% endblock login_content %}
+</main>
+{% endblock content %}
