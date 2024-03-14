@@ -1,9 +1,9 @@
 <!-- The main signup page, extends the initial page  -->
 {% extends "page.html" %}
 
-{% block title %}{% endblock title %}
+{% block title %} Sign Up Page {% endblock title %}
 
-{% block content %}
+{% block sign_content %}
 <div class="input_field">
     <form>
         <textarea class="name" name="username" placeholder="Input your username! ">{{ user }}</textarea>
@@ -11,4 +11,8 @@
         <button formmethod="post" formaction="{{ url_for('submit_click') }}">Create Account</button>
     </form>
 </div>
-{% endblock content %}
+
+<div class="redir_login">
+    <a href="{{ url_for('login_page') }}"> Already have an account? Login! </a>
+</div>
+{% endblock sign_content %}
