@@ -6,7 +6,17 @@ manager = db_manager()
 main_app = Flask(__name__)
 starter_username = 'TestingName'
 starter_pass = 'TestingPass'
+login_name = 'TestingLoginName'
+login_pass = 'TestingLoginPage'
 
+
+@main_app.route('/login', methods = ['GET', 'POST'])
+def login_page():
+    context = {
+        'start_user' : login_name,
+        'start_pass' : login_pass
+    }
+    return render_template('login_input.html', **context)
 
 @main_app.route('/', methods = ['GET', 'POST'])
 def main_page():
@@ -30,8 +40,23 @@ def submit_click():
         manager.insert_data(username, password)
         return render_template('success.html', **credentials)
 
-
-
 @main_app.route('/exists', methods=['GET', 'POST'])
 def exists_screen():
     return render_template('exists.html')
+
+@main_app.route('/login_success', methods=['GET', 'POST'])
+def login_click():
+    username = request.form['login_username']
+    password = request.form['login_password']
+    given = {
+        'username' : username,
+        'password' : password
+    }
+    if manager.account_checker(username, password):
+        return render_template('login_success.html', **given)
+    else:
+        return redirect(url_for('login_failed'))
+    
+@main_app.route('/login_failed', methods=['GET', 'POST'])
+def login_failed():
+    return render_template('login_failed.html')
